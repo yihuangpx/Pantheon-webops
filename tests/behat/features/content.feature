@@ -61,3 +61,8 @@ Feature: Content
     Then I should see the link "Article by Joe"
     When I follow "Article by Joe"
     Then I should see the text "Article by Joe"
+   @api
+   Scenario: Verify the login page
+    When I go to "user/login"
+    Then I should see "Log in"
+    And the response status code should be 200
